@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/actionMain">
+    <fragment
+        android:id="@+id/actionMain"
+        android:name="com.example.edacycours.ui.MainFragment"
+        android:label="@string/nav_you"
+        tools:layout="@layout/main_fragment" />
+    <fragment
+        android:id="@+id/actionUne"
+        android:name="com.example.edacycours.ui.une.UneFragment"
+        android:label="@string/nav_une" />
+    <fragment
+        android:id="@+id/actionWebsite"
+        android:name="com.example.edacycours.ui.website.WebsiteFragment"
+        android:label="@string/nav_website" />
+</navigation>
