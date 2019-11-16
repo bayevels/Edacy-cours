@@ -6,8 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 
 import com.example.edacycours.R
+import com.example.edacycours.data.model.Website
+import com.example.sentame.Util.toast
 
 class WebsiteFragment : Fragment() {
 
@@ -27,7 +30,13 @@ class WebsiteFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(WebsiteViewModel::class.java)
-        // TODO: Use the ViewModel
+        suscribeUi()
     }
 
+    private fun suscribeUi(){
+        val websiteObserver = Observer<List<Website>> {
+            toast(it.toString())
+        }
+        viewModel.websites?.observe(viewLifecycleOwner, websiteObserver)
+    }
 }
