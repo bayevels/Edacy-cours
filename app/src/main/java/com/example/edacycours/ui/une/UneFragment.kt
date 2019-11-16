@@ -6,8 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.example.edacycours.R
+import com.example.edacycours.data.model.Article
+import com.example.edacycours.ui.une.adapter.ArticleAdapter
 
 class UneFragment : Fragment() {
 

@@ -9,7 +9,11 @@
         android:id="@+id/actionMain"
         android:name="com.example.edacycours.ui.MainFragment"
         android:label="@string/nav_you"
-        tools:layout="@layout/main_fragment" />
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_actionMain_to_webClientFragment2"
+            app:destination="@id/webClientFragment" />
+    </fragment>
     <fragment
         android:id="@+id/actionUne"
         android:name="com.example.edacycours.ui.une.UneFragment"
@@ -18,4 +22,9 @@
         android:id="@+id/actionWebsite"
         android:name="com.example.edacycours.ui.website.WebsiteFragment"
         android:label="@string/nav_website" />
+    <fragment
+        android:id="@+id/webClientFragment"
+        android:name="com.example.edacycours.ui.webview.WebClientFragment"
+        android:label="fragment_web_client"
+        tools:layout="@layout/fragment_web_client" />
 </navigation>
