@@ -13,7 +13,10 @@
     <dimen name="dimension_32">32dp</dimen>
     <dimen name="dimension_56">56dp</dimen>
     <dimen name="dimension_72">72dp</dimen>
+    <dimen name="dimension_100">100dp</dimen>
 
-    <dimen name="card_height">100dp</dimen>
+    <dimen name="card_height">200dp</dimen>
+    <dimen name="image_height">100dp</dimen>
+    <dimen name="image_width">100dp</dimen>
 
 </resources>
