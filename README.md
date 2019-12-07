@@ -47,6 +47,11 @@ apply plugin: "androidx.navigation.safeargs.kotlin"
 2. The rest during the course
 
 ## Lesson 3
+1. Add the kapt plugins
+   ```groovy
+       apply plugin: 'kotlin-kapt'
+    ```
+2. Add dependencies
 ```groovy
      
      def room_version = "2.2.1"
