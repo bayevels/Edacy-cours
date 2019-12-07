@@ -46,7 +46,7 @@ apply plugin: "androidx.navigation.safeargs.kotlin"
 ```
 2. The rest during the course
 
-## Lesson 2
+## Lesson 3
 ```groovy
      
      def room_version = "2.2.1"
