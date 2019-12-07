@@ -45,3 +45,22 @@ apply plugin: "androidx.navigation.safeargs.kotlin"
     implementation 'de.hdodenhof:circleimageview:3.0.1'
 ```
 2. The rest during the course
+
+## Lesson 2
+```groovy
+     
+     def room_version = "2.2.1"
+    // LiveData
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
+
+    // Coroutines Depandencies
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2'
+
+    // Room dependencies
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:$room_version"    
+```
