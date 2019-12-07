@@ -11,8 +11,4 @@ object WebsiteRepository:  BaseRepository<WebsiteDao> {
     override fun dao(): WebsiteDao {
         return database!!.websiteDao()
     }
-
-    fun getWebsites(): LiveData<List<Website>> {
-       return dao().getAll()
-    }
 }

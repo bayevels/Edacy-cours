@@ -8,12 +8,4 @@ import com.example.edacycours.ui.common.Coroutines
 
 class WebsiteViewModel : ViewModel() {
 
-    var websites: LiveData<List<Website>>? = null
-        private set
-
-    init {
-        Coroutines.main {
-            websites = WebsiteRepository.getWebsites()
-        }
-    }
 }

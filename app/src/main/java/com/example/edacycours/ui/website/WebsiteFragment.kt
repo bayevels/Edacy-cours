@@ -29,14 +29,5 @@ class WebsiteFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(WebsiteViewModel::class.java)
-        suscribeUi()
-    }
-
-    private fun suscribeUi(){
-        val websiteObserver = Observer<List<Website>> {
-            toast(it.toString())
-        }
-        viewModel.websites?.observe(viewLifecycleOwner, websiteObserver)
     }
 }

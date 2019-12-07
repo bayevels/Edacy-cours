@@ -6,13 +6,14 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.edacycours.data.AppDatabase
+import com.example.edacycours.data.model.Article
 import com.example.edacycours.data.model.Website
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 val database: AppDatabase by lazy {
-    EdacyCoursApplication.database!!
+    EdacyCoursApplication.database
 }
 
 class EdacyCoursApplication : Application() {
@@ -39,18 +40,6 @@ class EdacyCoursApplication : Application() {
             .databaseBuilder(applicationContext, AppDatabase::class.java, "sentame-db")
             .fallbackToDestructiveMigration()
             .build()
-
-        GlobalScope.launch(Dispatchers.IO) {
-            database.websiteDao().insertAll(
-                listOf(
-                    Website(0,"seneweb", "www.seneweb.com"),
-                    Website(0, "sanslimite", "www.sanslimite.com"),
-                    Website(0, "senego", "www.senego.com")
-                )
-            )
-
-            database.websiteDao().getAll()
-        }
     }
 
 
